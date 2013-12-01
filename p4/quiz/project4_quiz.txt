@@ -1,0 +1,62 @@
+------------------------------------------------------------------------------
+Name: 
+SUNet: 
+Discussed Assignment With: 
+------------------------------------------------------------------------------
+
+Part 1. Chemical Similarity
+
+1. The tanimoto coefficient measures the similarity between two drugs, based on each drugs 2D fingerprint.
+
+
+2. Yes, they are different. The histogram for drugs that share a target is shifted to the right relative to the histogram for drugs that do NOT share a target. This means that the mean Tanimoto score is higher for drugs that share a target, implying that drugs which share a target tend to be more similar to each other (in terms of their 2D fingerprints) than drugs which do not share a target. This makes sense.
+
+
+3. A more accurate way to compare two molecules would be to take into account the 3D strucutre, i.e. the positions of atoms within the molecule, as opposed to just their 2D representation.
+
+
+
+Part 2. Ligand Set Similarity
+
+4a. 
+Total score: 29.2
+E-value: 2.2
+
+4b. 
+Total score: 47.0
+E-value: 0.27
+
+4c. 
+Total score: 61.2
+E-value: 2.0
+
+5. Although the vast mahority of sequences listed as 'significant alignments' are indeed forms of DHFR, some of those sequences are not. These results tell us that there are human proteins that bind some of the same ligands as DHFR, since we know that form implies functionality, and, therefore, proteins with similar sequences will likely bind ot the same ligands.
+
+
+6. If we consider the total score, the proteins in Question 4 are not that similar, since their total score values are on the order of ~30-60, whereas the 'significant' alignments we see in Question 5 have total score values of around 380, about a factor of 10 higher.
+
+
+7a. 
+P-value: 0.23
+
+7b. 
+P-value: 0.0
+
+7c. 
+P-value: 0.02
+
+8. 
+Most similar: DHFR and TYMS
+Somewhat similar: F2 and TYMS
+Not similar: DHFR and F2
+
+A low p-value implies that two proteins are similar. This means that many of the same drugs bind these proteins.
+
+Part 3. Network Visualization
+
+9. 
+Highly connected means ...
+Biochemically, it means that ...
+
+10. 
+
