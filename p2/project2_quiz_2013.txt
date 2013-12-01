@@ -1,0 +1,37 @@
+----------------------------------------------
+Name: Rory MacQueen
+SUNet: macqueen
+Discussed Assignment With:
+----------------------------------------------
+
+1a. Save image as "question1.jpg"
+
+1b. As k increases, the accuracy of the classifier goes down. This is due to the fact that when k is higher, you are polling more distant neighbours,
+whose similarity with the point in question is not all that high. But since all votes count equal, they dilute the accuracy of the classifier.
+
+1c. Patient at column number 35 is fairly consistently misclassified as AML. For me, this held true for all values of k until, of course, sensitivity
+hit 1.0, in which case no ALLs were misclassified because everything was classified as ALL.
+
+2a. Save image as "question2.jpg"
+
+2b. The general trend is that as p increases, sensitivity decreases, and specificity increases ( 1 - specificity decreases)
+
+3. Save image as "question3.jpg"
+
+4a. Yes, all ribosomal genes are in same cluster
+
+4b. 0% of cluster 1, and 18.9% of cluster 2 are ribosomal genes
+
+5. 120/554 (21.7%) of cluster 1 and 1/1913(0.052%) of cluster 2
+
+6a. The clusters in 4 and 5 basically were switched. In 4), cluster 1 had 1826 members and cluster 2 had 641 members. In 5), cluster 1 had 554 members
+and cluster 2 had 1913 members. In 4), all the ribosomal genes were in cluster 2, and in 5) practically all were in cluster 1. But in both cases the clusters were roughly the same except the labels (1 and 2) had been switched
+
+6b. In general, we can say that the initial choice of clusters will affect the outcome of the algorithm. However, the big effect is in the labeling of each cluster rather than in which members are assigned to each cluster. Since clustering algorithms care more about just separating the data than in 
+what label each cluster receives, this is not as big a concern for this algorithm.
+
+7a. Yes, I would say that about a third of the time, the gene #2467 will be classified differently from the rest of the ribosomal genes
+
+7b. 20/20 times gene #1511 would cluster with the majority of ribosomal genes
+
+7c. This makes sense because gene #1511 is involved in the process of protein translation, as are the ribosomal genes. Therefore, it makes sense that they would have the same expression data.

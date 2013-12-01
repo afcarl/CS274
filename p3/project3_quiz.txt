@@ -1,0 +1,60 @@
+Name: Rory MacQueen
+SUNet ID: macqueen
+
+Part 1. MD Concepts
+
+1. Atomic masses:
+
+   Calcium: 40.078 ± 0.004 u
+   Carbon: 12.0107 ± 0.0008 u
+   Nitrogen: 14.0067 ± 0.0002 u
+   Oxygen: 15.9994 ± 0.0003 u
+   Hydrogen: 1.00794 ± 0.00007 u
+
+2. We assume in our simulation that all atoms have the same mass, which is not in fact true. This affects our calculations for acceleration, since a = F/m. This in turn, affects all our kinematic equations to do with velocity and position
+
+3. The physical analogy we use for bonds is springs!
+
+4. A higher kB or kN implies that the force connecting the atoms is stronger. This means that it is harder to perturb them to be different from their equilibrium positions. In the spring analogy, we can think of a high kB or kN as a strong, rigid spring which takes much effort to stretch, whereas a low kB or kN implies a weak, flexible string that is easy to stretch.
+
+5. kB is usually larger since it includes chemical bonds between atoms (e.g. ionic forces or covalence forces) where as kN is just the connection between non-bonded atoms.
+
+6. The types of interactions that kN is representing are hydrogen bonds, electrostatic interaction of ions, interactions of charged molecules, and van der Waals forces.
+
+7. The van der Waals forces are the greatest in magnitude, followed by the electrostatic interactions. The hydrogen bond interactions are comparatively small.
+
+8. We use total energy of the system in order to measure overall stability over time as we are simulating the molecular dynamics
+
+9. Contributors are: kinetic energy, bond potential energy, non-bond potential energy
+
+Part 2. Simulations of Calmodulin
+
+1. Types of secondary structures: alpha helix, beta sheet, coils, turns. 4 types in total
+
+2. C. Temp = 4500K
+
+3. A. Kb=1,000, Kn=100
+
+4. Changing the nbCutoff value from 0.25 to 0.75 raises the threshold at which neighbouring bonds can be considered to have a 'non-bond' interaction. Therefore, we see that when we raise the value in this way, we see more non-bond interactions in our resultant protein structure
+
+5. Our simulation becomes unstable at timestep t=0.05
+
+6. The rings appear to be overlapping, which is not consistent with realistic chemistry
+
+7. Yes, the presence of calcium does appear to stabilize the binding sites, possibly because calcium forms an ionic bond and therefore provides more bond potential energy
+
+8. Yes, the calcium does seem be well constrained to the binding site in
+the visualization simulation
+
+9. Increased stability because over time there is less freedom of movement and hence you get less kinetic energy and a more thermodynamically stable molecule
+
+10. Yes, at higher temperatures we see lower scores than at the default temperature
+
+11. When we remove calcium, we see more variance in the distances between the two atoms in question. When we use the mutated calcium, we see even more variance
+
+12. Our observations show us that calcium (and, importantly, the right type of calcium) are incredibly important for the stability of the protein
+
+13. 1) We could use the actual mass of each atom in the simulation, rather than relying on using one mass for all atoms
+2) We could also do a more nuanced modeling of the different types of atomic forces involved in bonds, eg. electrostatic forces and van der Waals forces, rather than lumping them all together as one.
+
+13) Not assume that non-bond interactions are fixed based on the inital distances. In our model, we never change whether a non-bond interaction exists after we have chosen them in the beginning of the simulation. A more nuanced approach would be to update these non-bond interaction pairs as the simulation went on.

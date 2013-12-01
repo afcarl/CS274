@@ -1,0 +1,538 @@
+png(filename="data_files/graph1.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen")#
+data = read.table ("data_files/sitesCa1.euc", header=FALSE, sep="\t")#
+plot (data$V2, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE, ylim = c(0.43, 0.5))#
+axis(1, at=0:100, lab=data$V1)#
+axis(2, las=1)#
+box()#
+lines (data$V3, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data$V4, type="o", pch=23, lty=3, col=plot_colors[3])#
+title(main="Distance between atoms 17 and 96", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Distance", col.lab=rgb(0,0.5,0))#
+names = c("bound to calcium", "not bound to calcium", "mutated near calcium")#
+legend(1, 0.5, names, cex=0.8, col=plot_colors, pch=21:23, lty=1:3);#
+#
+dev.off()#
+png(filename="data_files/graph2.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen")#
+data = read.table ("data_files/sitesCa2.euc", header=FALSE, sep="\t")#
+plot (data$V2, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE, ylim = c(0.41, 0.55))#
+axis(1, at=0:100, lab=data$V1)#
+axis(2, las=1)#
+box()#
+lines (data$V3, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data$V4, type="o", pch=23, lty=3, col=plot_colors[3])#
+title(main="Distance between atoms 298 and 385", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Distance", col.lab=rgb(0,0.5,0))#
+names = c("bound to calcium", "not bound to calcium", "mutated near calcium")#
+legend(1, 0.55, names, cex=0.8, col=plot_colors, pch=21:23, lty=1:3);#
+#
+dev.off()#
+png(filename="data_files/graph3.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen", 'black')#
+data = read.table ("data_files/1FW4_med_out.features", header=TRUE, sep="\t")#
+data2 = read.table ("data_files/1FW4_noCa_med_out.features", header=TRUE, sep="\t")#
+plot (data$Center1, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE)#
+axis(1, at=0:99, lab=data$TimeStep)#
+axis(2, las=1)#
+box()#
+lines (data$Center2, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data2$Center1, type="o", pch=23, lty=3, col=plot_colors[3])#
+lines (data2$Center2, type="o", pch=24, lty=4, col=plot_colors[4])#
+title(main="Comparison of the calcium binding site scores. Comparing med to noCa_med", col.main="red", font.main=4)#
+title(xlab= "TimeStep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Score", col.lab=rgb(0,0.5,0))#
+names = c("1FW4_med_out.features Center1", "1FW4_med_out.features Center2", "1FW4_noCa_med_out.features Center1", "1FW4_noCa_med_out.features Center2")#
+legend(1, 4, names, cex=0.8, col=plot_colors, pch=21:24, lty=1:4);#
+#
+dev.off()#
+png(filename="data_files/graph4.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen", 'black')#
+data = read.table ("data_files/1FW4_med_out.features", header=TRUE, sep="\t")#
+data2 = read.table ("data_files/1FW4_hot_out.features", header=TRUE, sep="\t")#
+plot (data$Center1, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE)#
+axis(1, at=0:99, lab=data$TimeStep)#
+axis(2, las=1)#
+box()#
+lines (data$Center2, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data2$Center1, type="o", pch=23, lty=3, col=plot_colors[3])#
+lines (data2$Center2, type="o", pch=24, lty=4, col=plot_colors[4])#
+title(main="Comparison of the calcium binding site scores. Comparing med to hot", col.main="red", font.main=4)#
+title(xlab= "TimeStep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Score", col.lab=rgb(0,0.5,0))#
+names = c("1FW4_med_out.features Center1", "1FW4_med_out.features Center2", "1FW4_hot_out.features Center1", "1FW4_hot_out.features Center2")#
+legend(1, 4, names, cex=0.8, col=plot_colors, pch=21:24, lty=1:4);#
+#
+dev.off()
+Load correct JSON file based on personality#
+#
+Previously we had hard-coded the name of the JSON file#
+from which to load app data. Now we get the system personality#
+and load the appropriate JSON file based on that.
+png(filename="data_files/graph1.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen")#
+data = read.table ("data_files/sitesCa1.euc", header=FALSE, sep="\t")#
+plot (data$V2, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE, ylim = c(0.43, 0.5))#
+axis(1, at=0:100, lab=data$V1)#
+axis(2, las=1)#
+box()#
+lines (data$V3, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data$V4, type="o", pch=23, lty=3, col=plot_colors[3])#
+title(main="Distance between atoms 17 and 96", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Distance", col.lab=rgb(0,0.5,0))#
+names = c("bound to calcium", "not bound to calcium", "mutated near calcium")#
+legend(1, 0.5, names, cex=0.8, col=plot_colors, pch=21:23, lty=1:3);#
+#
+dev.off()#
+png(filename="data_files/graph2.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen")#
+data = read.table ("data_files/sitesCa2.euc", header=FALSE, sep="\t")#
+plot (data$V2, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE, ylim = c(0.41, 0.55))#
+axis(1, at=0:100, lab=data$V1)#
+axis(2, las=1)#
+box()#
+lines (data$V3, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data$V4, type="o", pch=23, lty=3, col=plot_colors[3])#
+title(main="Distance between atoms 298 and 385", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Distance", col.lab=rgb(0,0.5,0))#
+names = c("bound to calcium", "not bound to calcium", "mutated near calcium")#
+legend(1, 0.55, names, cex=0.8, col=plot_colors, pch=21:23, lty=1:3);#
+#
+dev.off()#
+png(filename="data_files/graph3.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen", 'black')#
+data = read.table ("data_files/1FW4_med_out.features", header=TRUE, sep="\t")#
+data2 = read.table ("data_files/1FW4_noCa_med_out.features", header=TRUE, sep="\t")#
+plot (data$Center1, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE)#
+axis(1, at=0:99, lab=data$TimeStep)#
+axis(2, las=1)#
+box()#
+lines (data$Center2, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data2$Center1, type="o", pch=23, lty=3, col=plot_colors[3])#
+lines (data2$Center2, type="o", pch=24, lty=4, col=plot_colors[4])#
+title(main="Comparison of the calcium binding site scores. Comparing med to noCa_med", col.main="red", font.main=4)#
+title(xlab= "TimeStep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Score", col.lab=rgb(0,0.5,0))#
+names = c("1FW4_med_out.features Center1", "1FW4_med_out.features Center2", "1FW4_noCa_med_out.features Center1", "1FW4_noCa_med_out.features Center2")#
+legend(1, 4, names, cex=0.8, col=plot_colors, pch=21:24, lty=1:4);#
+#
+dev.off()#
+png(filename="data_files/graph4.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen", 'black')#
+data = read.table ("data_files/1FW4_med_out.features", header=TRUE, sep="\t")#
+data2 = read.table ("data_files/1FW4_hot_out.features", header=TRUE, sep="\t")#
+plot (data$Center1, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE)#
+axis(1, at=0:99, lab=data$TimeStep)#
+axis(2, las=1)#
+box()#
+lines (data$Center2, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data2$Center1, type="o", pch=23, lty=3, col=plot_colors[3])#
+lines (data2$Center2, type="o", pch=24, lty=4, col=plot_colors[4])#
+title(main="Comparison of the calcium binding site scores. Comparing med to hot", col.main="red", font.main=4)#
+title(xlab= "TimeStep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Score", col.lab=rgb(0,0.5,0))#
+names = c("1FW4_med_out.features Center1", "1FW4_med_out.features Center2", "1FW4_hot_out.features Center1", "1FW4_hot_out.features Center2")#
+legend(1, 4, names, cex=0.8, col=plot_colors, pch=21:24, lty=1:4);#
+#
+dev.off()
+png(filename="data_files/graph1.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen")#
+data = read.table ("data_files/sitesCa1.euc", header=FALSE, sep="\t")#
+plot (data$V2, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE, ylim = c(0.43, 0.5))#
+axis(1, at=0:100, lab=data$V1)#
+axis(2, las=1)#
+box()#
+lines (data$V3, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data$V4, type="o", pch=23, lty=3, col=plot_colors[3])#
+title(main="Distance between atoms 17 and 96", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Distance", col.lab=rgb(0,0.5,0))#
+names = c("bound to calcium", "not bound to calcium", "mutated near calcium")#
+legend(1, 0.5, names, cex=0.8, col=plot_colors, pch=21:23, lty=1:3);#
+#
+dev.off()#
+png(filename="data_files/graph2.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen")#
+data = read.table ("data_files/sitesCa2.euc", header=FALSE, sep="\t")#
+plot (data$V2, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE, ylim = c(0.41, 0.55))#
+axis(1, at=0:100, lab=data$V1)#
+axis(2, las=1)#
+box()#
+lines (data$V3, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data$V4, type="o", pch=23, lty=3, col=plot_colors[3])#
+title(main="Distance between atoms 298 and 385", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Distance", col.lab=rgb(0,0.5,0))#
+names = c("bound to calcium", "not bound to calcium", "mutated near calcium")#
+legend(1, 0.55, names, cex=0.8, col=plot_colors, pch=21:23, lty=1:3);#
+#
+dev.off()#
+png(filename="data_files/graph3.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen", 'black')#
+data = read.table ("data_files/1FW4_med_out.features", header=TRUE, sep="\t")#
+data2 = read.table ("data_files/1FW4_noCa_med_out.features", header=TRUE, sep="\t")#
+plot (data$Center1, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE)#
+axis(1, at=0:99, lab=data$TimeStep)#
+axis(2, las=1)#
+box()#
+lines (data$Center2, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data2$Center1, type="o", pch=23, lty=3, col=plot_colors[3])#
+lines (data2$Center2, type="o", pch=24, lty=4, col=plot_colors[4])#
+title(main="Comparison of the calcium binding site scores. Comparing med to noCa_med", col.main="red", font.main=4)#
+title(xlab= "TimeStep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Score", col.lab=rgb(0,0.5,0))#
+names = c("1FW4_med_out.features Center1", "1FW4_med_out.features Center2", "1FW4_noCa_med_out.features Center1", "1FW4_noCa_med_out.features Center2")#
+legend(1, 4, names, cex=0.8, col=plot_colors, pch=21:24, lty=1:4);#
+#
+dev.off()#
+png(filename="data_files/graph4.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen", 'black')#
+data = read.table ("data_files/1FW4_med_out.features", header=TRUE, sep="\t")#
+data2 = read.table ("data_files/1FW4_hot_out.features", header=TRUE, sep="\t")#
+plot (data$Center1, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE)#
+axis(1, at=0:99, lab=data$TimeStep)#
+axis(2, las=1)#
+box()#
+lines (data$Center2, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data2$Center1, type="o", pch=23, lty=3, col=plot_colors[3])#
+lines (data2$Center2, type="o", pch=24, lty=4, col=plot_colors[4])#
+title(main="Comparison of the calcium binding site scores. Comparing med to hot", col.main="red", font.main=4)#
+title(xlab= "TimeStep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Score", col.lab=rgb(0,0.5,0))#
+names = c("1FW4_med_out.features Center1", "1FW4_med_out.features Center2", "1FW4_hot_out.features Center1", "1FW4_hot_out.features Center2")#
+legend(1, 4, names, cex=0.8, col=plot_colors, pch=21:24, lty=1:4);#
+#
+dev.off()
+1FW4_noCa_cold_out.erg1FW4_noCa_cold_out.rvc1FW4_noCa_med.rvc1FW4_noCa_cold.rvc1FW4_med.rvc1FW4_hot.rvc1FW4_abbreviated_renum.pdb1FW4_abbreviated_noCa_renum.pdb1FW4_MUT_med.rvc
+png(filename="data_files/graph1.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen")#
+data = read.table ("data_files/sitesCa1.euc", header=FALSE, sep="\t")#
+plot (data$V2, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE, ylim = c(0.43, 0.5))#
+axis(1, at=0:100, lab=data$V1)#
+axis(2, las=1)#
+box()#
+lines (data$V3, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data$V4, type="o", pch=23, lty=3, col=plot_colors[3])#
+title(main="Distance between atoms 17 and 96", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Distance", col.lab=rgb(0,0.5,0))#
+names = c("bound to calcium", "not bound to calcium", "mutated near calcium")#
+legend(1, 0.5, names, cex=0.8, col=plot_colors, pch=21:23, lty=1:3);#
+#
+dev.off()#
+png(filename="data_files/graph2.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen")#
+data = read.table ("data_files/sitesCa2.euc", header=FALSE, sep="\t")#
+plot (data$V2, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE, ylim = c(0.41, 0.55))#
+axis(1, at=0:100, lab=data$V1)#
+axis(2, las=1)#
+box()#
+lines (data$V3, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data$V4, type="o", pch=23, lty=3, col=plot_colors[3])#
+title(main="Distance between atoms 298 and 385", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Distance", col.lab=rgb(0,0.5,0))#
+names = c("bound to calcium", "not bound to calcium", "mutated near calcium")#
+legend(1, 0.55, names, cex=0.8, col=plot_colors, pch=21:23, lty=1:3);#
+#
+dev.off()#
+png(filename="data_files/graph3.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen", 'black')#
+data = read.table ("data_files/1FW4_med_out.features", header=TRUE, sep="\t")#
+data2 = read.table ("data_files/1FW4_noCa_med_out.features", header=TRUE, sep="\t")#
+plot (data$Center1, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE)#
+axis(1, at=0:99, lab=data$TimeStep)#
+axis(2, las=1)#
+box()#
+lines (data$Center2, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data2$Center1, type="o", pch=23, lty=3, col=plot_colors[3])#
+lines (data2$Center2, type="o", pch=24, lty=4, col=plot_colors[4])#
+title(main="Comparison of the calcium binding site scores. Comparing med to noCa_med", col.main="red", font.main=4)#
+title(xlab= "TimeStep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Score", col.lab=rgb(0,0.5,0))#
+names = c("1FW4_med_out.features Center1", "1FW4_med_out.features Center2", "1FW4_noCa_med_out.features Center1", "1FW4_noCa_med_out.features Center2")#
+legend(1, 4, names, cex=0.8, col=plot_colors, pch=21:24, lty=1:4);#
+#
+dev.off()#
+png(filename="data_files/graph4.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen", 'black')#
+data = read.table ("data_files/1FW4_med_out.features", header=TRUE, sep="\t")#
+data2 = read.table ("data_files/1FW4_hot_out.features", header=TRUE, sep="\t")#
+plot (data$Center1, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE)#
+axis(1, at=0:99, lab=data$TimeStep)#
+axis(2, las=1)#
+box()#
+lines (data$Center2, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data2$Center1, type="o", pch=23, lty=3, col=plot_colors[3])#
+lines (data2$Center2, type="o", pch=24, lty=4, col=plot_colors[4])#
+title(main="Comparison of the calcium binding site scores. Comparing med to hot", col.main="red", font.main=4)#
+title(xlab= "TimeStep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Score", col.lab=rgb(0,0.5,0))#
+names = c("1FW4_med_out.features Center1", "1FW4_med_out.features Center2", "1FW4_hot_out.features Center1", "1FW4_hot_out.features Center2")#
+legend(1, 4, names, cex=0.8, col=plot_colors, pch=21:24, lty=1:4);#
+#
+dev.off()
+png(filename="data_files/graph1.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen")#
+data = read.table ("data_files/sitesCa1.euc", header=FALSE, sep="\t")#
+plot (data$V2, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE, ylim = c(0.43, 0.5))#
+axis(1, at=0:100, lab=data$V1)#
+axis(2, las=1)#
+box()#
+lines (data$V3, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data$V4, type="o", pch=23, lty=3, col=plot_colors[3])#
+title(main="Distance between atoms 17 and 96", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Distance", col.lab=rgb(0,0.5,0))#
+names = c("bound to calcium", "not bound to calcium", "mutated near calcium")#
+legend(1, 0.5, names, cex=0.8, col=plot_colors, pch=21:23, lty=1:3);#
+#
+dev.off()#
+png(filename="data_files/graph2.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen")#
+data = read.table ("data_files/sitesCa2.euc", header=FALSE, sep="\t")#
+plot (data$V2, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE, ylim = c(0.41, 0.55))#
+axis(1, at=0:100, lab=data$V1)#
+axis(2, las=1)#
+box()#
+lines (data$V3, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data$V4, type="o", pch=23, lty=3, col=plot_colors[3])#
+title(main="Distance between atoms 298 and 385", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Distance", col.lab=rgb(0,0.5,0))#
+names = c("bound to calcium", "not bound to calcium", "mutated near calcium")#
+legend(1, 0.55, names, cex=0.8, col=plot_colors, pch=21:23, lty=1:3);#
+#
+dev.off()#
+png(filename="data_files/graph3.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen", 'black')#
+data = read.table ("data_files/1FW4_med_out.features", header=TRUE, sep="\t")#
+data2 = read.table ("data_files/1FW4_noCa_med_out.features", header=TRUE, sep="\t")#
+plot (data$Center1, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE)#
+axis(1, at=0:99, lab=data$TimeStep)#
+axis(2, las=1)#
+box()#
+lines (data$Center2, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data2$Center1, type="o", pch=23, lty=3, col=plot_colors[3])#
+lines (data2$Center2, type="o", pch=24, lty=4, col=plot_colors[4])#
+title(main="Comparison of the calcium binding site scores. Comparing med to noCa_med", col.main="red", font.main=4)#
+title(xlab= "TimeStep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Score", col.lab=rgb(0,0.5,0))#
+names = c("1FW4_med_out.features Center1", "1FW4_med_out.features Center2", "1FW4_noCa_med_out.features Center1", "1FW4_noCa_med_out.features Center2")#
+legend(1, 4, names, cex=0.8, col=plot_colors, pch=21:24, lty=1:4);#
+#
+dev.off()#
+png(filename="data_files/graph4.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen", 'black')#
+data = read.table ("data_files/1FW4_med_out.features", header=TRUE, sep="\t")#
+data2 = read.table ("data_files/1FW4_hot_out.features", header=TRUE, sep="\t")#
+plot (data$Center1, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE)#
+axis(1, at=0:99, lab=data$TimeStep)#
+axis(2, las=1)#
+box()#
+lines (data$Center2, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data2$Center1, type="o", pch=23, lty=3, col=plot_colors[3])#
+lines (data2$Center2, type="o", pch=24, lty=4, col=plot_colors[4])#
+title(main="Comparison of the calcium binding site scores. Comparing med to hot", col.main="red", font.main=4)#
+title(xlab= "TimeStep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Score", col.lab=rgb(0,0.5,0))#
+names = c("1FW4_med_out.features Center1", "1FW4_med_out.features Center2", "1FW4_hot_out.features Center1", "1FW4_hot_out.features Center2")#
+legend(1, 4, names, cex=0.8, col=plot_colors, pch=21:24, lty=1:4);#
+#
+dev.off()
+png(filename="data_files/graph1.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen")#
+data = read.table ("data_files/sitesCa1.euc", header=FALSE, sep="\t")#
+plot (data$V2, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE, ylim = c(0.43, 0.5))#
+axis(1, at=0:100, lab=data$V1)#
+axis(2, las=1)#
+box()#
+lines (data$V3, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data$V4, type="o", pch=23, lty=3, col=plot_colors[3])#
+title(main="Distance between atoms 17 and 96", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Distance", col.lab=rgb(0,0.5,0))#
+names = c("bound to calcium", "not bound to calcium", "mutated near calcium")#
+legend(1, 0.5, names, cex=0.8, col=plot_colors, pch=21:23, lty=1:3);#
+#
+dev.off()#
+png(filename="data_files/graph2.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen")#
+data = read.table ("data_files/sitesCa2.euc", header=FALSE, sep="\t")#
+plot (data$V2, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE, ylim = c(0.41, 0.55))#
+axis(1, at=0:100, lab=data$V1)#
+axis(2, las=1)#
+box()#
+lines (data$V3, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data$V4, type="o", pch=23, lty=3, col=plot_colors[3])#
+title(main="Distance between atoms 298 and 385", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Distance", col.lab=rgb(0,0.5,0))#
+names = c("bound to calcium", "not bound to calcium", "mutated near calcium")#
+legend(1, 0.55, names, cex=0.8, col=plot_colors, pch=21:23, lty=1:3);#
+#
+dev.off()#
+png(filename="data_files/graph3.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen", 'black')#
+data = read.table ("data_files/1FW4_med_out.features", header=TRUE, sep="\t")#
+data2 = read.table ("data_files/1FW4_noCa_med_out.features", header=TRUE, sep="\t")#
+plot (data$Center1, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE)#
+axis(1, at=0:99, lab=data$Timestep)#
+axis(2, las=1)#
+box()#
+lines (data$Center2, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data2$Center1, type="o", pch=23, lty=3, col=plot_colors[3])#
+lines (data2$Center2, type="o", pch=24, lty=4, col=plot_colors[4])#
+title(main="Comparison of the calcium binding site scores. Comparing med to noCa_med", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Score", col.lab=rgb(0,0.5,0))#
+names = c("1FW4_med_out.features Center1", "1FW4_med_out.features Center2", "1FW4_noCa_med_out.features Center1", "1FW4_noCa_med_out.features Center2")#
+legend(1, 4, names, cex=0.8, col=plot_colors, pch=21:24, lty=1:4);#
+#
+dev.off()#
+png(filename="data_files/graph4.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen", 'black')#
+data = read.table ("data_files/1FW4_med_out.features", header=TRUE, sep="\t")#
+data2 = read.table ("data_files/1FW4_hot_out.features", header=TRUE, sep="\t")#
+plot (data$Center1, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE)#
+axis(1, at=0:99, lab=data$TimeStep)#
+axis(2, las=1)#
+box()#
+lines (data$Center2, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data2$Center1, type="o", pch=23, lty=3, col=plot_colors[3])#
+lines (data2$Center2, type="o", pch=24, lty=4, col=plot_colors[4])#
+title(main="Comparison of the calcium binding site scores. Comparing med to hot", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Score", col.lab=rgb(0,0.5,0))#
+names = c("1FW4_med_out.features Center1", "1FW4_med_out.features Center2", "1FW4_hot_out.features Center1", "1FW4_hot_out.features Center2")#
+legend(1, 4, names, cex=0.8, col=plot_colors, pch=21:24, lty=1:4);#
+#
+dev.off()
+png(filename="data_files/graph1.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen")#
+data = read.table ("data_files/sitesCa1.euc", header=FALSE, sep="\t")#
+plot (data$V2, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE, ylim = c(0.43, 0.5))#
+axis(1, at=0:100, lab=data$V1)#
+axis(2, las=1)#
+box()#
+lines (data$V3, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data$V4, type="o", pch=23, lty=3, col=plot_colors[3])#
+title(main="A graph showing the change in distance between atoms 17 and 96 as timestep increases", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Distance", col.lab=rgb(0,0.5,0))#
+names = c("bound to calcium", "not bound to calcium", "mutated near calcium")#
+legend(1, 0.5, names, cex=0.8, col=plot_colors, pch=21:23, lty=1:3);#
+#
+dev.off()#
+png(filename="data_files/graph2.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen")#
+data = read.table ("data_files/sitesCa2.euc", header=FALSE, sep="\t")#
+plot (data$V2, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE, ylim = c(0.41, 0.55))#
+axis(1, at=0:100, lab=data$V1)#
+axis(2, las=1)#
+box()#
+lines (data$V3, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data$V4, type="o", pch=23, lty=3, col=plot_colors[3])#
+title(main="A graph showing the change in distance between atoms 298 and 385 as timestep increases", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Distance", col.lab=rgb(0,0.5,0))#
+names = c("bound to calcium", "not bound to calcium", "mutated near calcium")#
+legend(1, 0.55, names, cex=0.8, col=plot_colors, pch=21:23, lty=1:3);#
+#
+dev.off()#
+png(filename="data_files/graph3.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen", 'black')#
+data = read.table ("data_files/1FW4_med_out.features", header=TRUE, sep="\t")#
+data2 = read.table ("data_files/1FW4_noCa_med_out.features", header=TRUE, sep="\t")#
+plot (data$Center1, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE)#
+axis(1, at=0:99, lab=data$Timestep)#
+axis(2, las=1)#
+box()#
+lines (data$Center2, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data2$Center1, type="o", pch=23, lty=3, col=plot_colors[3])#
+lines (data2$Center2, type="o", pch=24, lty=4, col=plot_colors[4])#
+title(main="A graph to show the effect of calcium on protein scores", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Score", col.lab=rgb(0,0.5,0))#
+names = c("1FW4_med_out.features Center1", "1FW4_med_out.features Center2", "1FW4_noCa_med_out.features Center1", "1FW4_noCa_med_out.features Center2")#
+legend(1, 4, names, cex=0.8, col=plot_colors, pch=21:24, lty=1:4);#
+#
+dev.off()#
+png(filename="data_files/graph4.jpeg", height=700, width=750, #
+ bg="white")#
+#
+plot_colors <- c("blue","red","forestgreen", 'black')#
+data = read.table ("data_files/1FW4_med_out.features", header=TRUE, sep="\t")#
+data2 = read.table ("data_files/1FW4_hot_out.features", header=TRUE, sep="\t")#
+plot (data$Center1, type="o", col=plot_colors[1], axes=FALSE, ann=FALSE)#
+axis(1, at=0:99, lab=data$TimeStep)#
+axis(2, las=1)#
+box()#
+lines (data$Center2, type="o", pch=22, lty=2, col=plot_colors[2])#
+lines (data2$Center1, type="o", pch=23, lty=3, col=plot_colors[3])#
+lines (data2$Center2, type="o", pch=24, lty=4, col=plot_colors[4])#
+title(main="A graph to show the effect of calcium on protein scores (hot vs. med)", col.main="red", font.main=4)#
+title(xlab= "Timestep", col.lab=rgb(0,0.5,0))#
+title(ylab= "Score", col.lab=rgb(0,0.5,0))#
+names = c("1FW4_med_out.features Center1", "1FW4_med_out.features Center2", "1FW4_hot_out.features Center1", "1FW4_hot_out.features Center2")#
+legend(1, 4, names, cex=0.8, col=plot_colors, pch=21:24, lty=1:4);#
+#
+dev.off()
