@@ -1,7 +1,7 @@
 ------------------------------------------------------------------------------
-Name: 
-SUNet: 
-Discussed Assignment With: 
+Name: Rory MacQueen
+SUNet: macqueen
+Discussed Assignment With: None
 ------------------------------------------------------------------------------
 
 Part 1. Chemical Similarity
@@ -13,7 +13,6 @@ Part 1. Chemical Similarity
 
 
 3. A more accurate way to compare two molecules would be to take into account the 3D strucutre, i.e. the positions of atoms within the molecule, as opposed to just their 2D representation.
-
 
 
 Part 2. Ligand Set Similarity
@@ -55,8 +54,9 @@ A low p-value implies that two proteins are similar. This means that many of the
 Part 3. Network Visualization
 
 9. 
-Highly connected means ...
-Biochemically, it means that ...
+Highly connected means ... there were a lot of other proteins (nodes) with whom this protein had a significantly low p-value. 
+Biochemically, it means that ... this protein shares with a lot of other proteins the drugs that bind it, i.e. the drugs that bind it also bind lots of other proteins
 
-10. 
+10. Yes, we see a nice clustering of nodes by color in the network, implying that proteins tend to form interconnections based on their annotated indications. A node might be connected with nodes of different colors, because some of the indications may stem from the same biochemical processes, e.g. metabolic pathways, in which case clearly the same set of drugs that bind one protein will bind the other, thus resulting in an edge between the nodes.
+
 
